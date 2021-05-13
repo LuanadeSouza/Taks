@@ -1,7 +1,9 @@
 package br.com.luanadev.tasks.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -9,6 +11,17 @@ import br.com.luanadev.tasks.data.SortOrder
 import br.com.luanadev.tasks.data.TasksRepository
 import br.com.luanadev.tasks.data.UserPreferencesRepository
 import br.com.luanadev.tasks.databinding.ActivityTasksBinding
+import by.kirich1409.viewbindingdelegate.viewBinding
+import androidx.datastore.preferences.SharedPreferencesMigration
+
+private const val USER_PREFERENCES_NAME = "user_preferences"
+
+private val Context.dataStore by preferencesDataStore(
+    name = USER_PREFERENCES_NAME,
+    produceMigrations = { context ->
+        listOf(SharedPreferencesMigration(context, USER_PREFERENCES_NAME))
+    }
+)
 
 class TasksActivity : AppCompatActivity() {
 
@@ -25,14 +38,17 @@ class TasksActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(
             this,
-            TasksViewModelFactory(TasksRepository, UserPreferencesRepository.getInstance(this))
+            TasksViewModelFactory(
+                TasksRepository,
+                UserPreferencesRepository(dataStore)
+            )
         ).get(TasksViewModel::class.java)
 
         setupRecyclerView()
         setupFilterListeners(viewModel)
         setupSort()
 
-        viewModel.tasksUiModel.observe(owner = this) { tasksUiModel ->
+        viewModel.tasksUiModel.observe(this) { tasksUiModel ->
             adapter.submitList(tasksUiModel.tasks)
             updateSort(tasksUiModel.sortOrder)
             binding.showCompletedSwitch.isChecked = tasksUiModel.showCompleted
@@ -46,6 +62,7 @@ class TasksActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
+        // add dividers between RecyclerView's row items
         val decoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         binding.list.addItemDecoration(decoration)
 

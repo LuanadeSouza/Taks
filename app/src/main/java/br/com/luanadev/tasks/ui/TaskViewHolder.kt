@@ -9,12 +9,14 @@ import br.com.luanadev.tasks.data.Task
 import br.com.luanadev.tasks.data.TaskPriority
 import br.com.luanadev.tasks.databinding.TaskViewItemBinding
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
+
 
 class TaskViewHolder(
     private val binding: TaskViewItemBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
+    // Format date as: Apr 6, 2020
     private val dateFormat = SimpleDateFormat("MMM d, yyyy", Locale.US)
 
     fun bind(todo: Task) {

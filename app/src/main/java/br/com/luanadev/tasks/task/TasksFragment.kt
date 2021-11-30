@@ -14,15 +14,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import br.com.luanadev.tasks.EventObserver
 import br.com.luanadev.tasks.R
-import br.com.luanadev.tasks.TasksFragmentArgs
-import br.com.luanadev.tasks.TasksFragmentDirections
 import br.com.luanadev.tasks.databinding.TasksFragBinding
 import br.com.luanadev.tasks.util.setupRefreshLayout
 import br.com.luanadev.tasks.util.setupSnackbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
-
 
 class TasksFragment : Fragment() {
 

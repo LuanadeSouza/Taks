@@ -13,9 +13,29 @@
         <entry key="app/src/main/res/drawable/ic_done.xml" value="0.3645833333333333" />
         <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.3645833333333333" />
         <entry key="app/src/main/res/drawable/ic_filter_list.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/ic_list.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/ic_statistics.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/ic_statistics_100dp.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/ic_statistics_24dp.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/ic_verified_user_96dp.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/list_completed_touch_feedback.xml" value="0.3645833333333333" />
+        <entry key="app/src/main/res/drawable/touch_feedback.xml" value="0.3645833333333333" />
         <entry key="app/src/main/res/font/opensans_font.xml" value="0.3728205128205128" />
         <entry key="app/src/main/res/layout/activity_tasks.xml" value="0.3484375" />
+        <entry key="app/src/main/res/layout/addtask_frag.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.3484375" />
+        <entry key="app/src/main/res/layout/statistics_frag.xml" value="0.3484375" />
+        <entry key="app/src/main/res/layout/task_item.xml" value="0.3484375" />
         <entry key="app/src/main/res/layout/task_view_item.xml" value="0.33796296296296297" />
+        <entry key="app/src/main/res/layout/taskdetail_frag.xml" value="0.3484375" />
+        <entry key="app/src/main/res/layout/tasks_act.xml" value="0.3484375" />
+        <entry key="app/src/main/res/layout/tasks_frag.xml" value="0.3484375" />
+        <entry key="app/src/main/res/menu/drawer_actions.xml" value="0.3484375" />
+        <entry key="app/src/main/res/menu/filter_tasks.xml" value="0.3484375" />
+        <entry key="app/src/main/res/menu/taskdetail_fragment_menu.xml" value="0.3484375" />
+        <entry key="app/src/main/res/menu/tasks_fragment_menu.xml" value="0.3484375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3645833333333333" />
       </map>
     </option>
   </component>

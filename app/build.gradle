@@ -72,6 +72,10 @@ dependencies {
 
     //DataStore
     implementation "androidx.datastore:datastore-preferences:1.0.0-beta01"
+    implementation 'androidx.room:room-common:2.3.0'
+    implementation 'androidx.room:room-ktx:2.3.0'
+
+    implementation "com.jakewharton.timber:timber:4.7.1"
 
     // testing
     testImplementation "junit:junit:4.13.2"
